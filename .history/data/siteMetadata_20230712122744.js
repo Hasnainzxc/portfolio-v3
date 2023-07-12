@@ -7,16 +7,16 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://sajidjaved.co',
-  siteRepo: 'https://github.com/hasnainzxc/portfolio-v3',
+  siteRepo: 'https://github.com/SageTheThird/portfolio-v3',
   siteLogo: '/static/images/logo.png',
   image: '/static/avatar.jpg',
   socialBanner: '/static/banner.png',
   email: 'ksajid505@gmail.com',
-  github: 'https://github.com/hasnainzxc',
-  twitter: 'https://twitter.com/hasnainzxc',
+  github: 'https://github.com/SageTheThird',
+  twitter: 'https://twitter.com/sajid.javed',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com/hasnainzxc',
+  linkedin: 'https://www.linkedin.com',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
