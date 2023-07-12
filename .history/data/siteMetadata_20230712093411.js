@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'Hasnain',
-  author: 'Hasnain',
-  headerTitle: 'Hasnain',
+  title: 'Sajid Javed',
+  author: 'Sajid Javed',
+  headerTitle: 'Sajid Javed',
   description:
     'A software engineer who values learning and growing with people, teams, and technologies.',
   language: 'en-us',
