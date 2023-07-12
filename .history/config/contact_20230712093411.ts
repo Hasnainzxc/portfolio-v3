@@ -16,8 +16,8 @@ export const contact: Contact = {
   site: 'sajidjaved.com',
   calendly: 'https://calendly.com/karanpratapsingh',
   links: {
-    github: 'https://github.com/hasnainzxc',
-    linkedin: 'https://linkedin.com/in/hasnainzxc',
-    email: 'mailto:hasnainzxc@icloud.com',
+    github: 'https://github.com/SageTheThird',
+    linkedin: 'https://linkedin.com/in/sajidjavedxyz',
+    email: 'mailto:ksajid505@gmail.com',
   },
 };
