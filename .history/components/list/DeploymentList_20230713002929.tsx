@@ -5,18 +5,21 @@ import { AiOutlineLink } from 'react-icons/ai';
 
 interface DeploymentListProps {
   deployment: Deployment;
+  deploymentMode: 'light' | 'dark'; // Add deployment mode prop
 }
 
 function DeploymentList(props: DeploymentListProps): React.ReactElement {
-  const { deployment } = props;
+  const { deployment, deploymentMode } = props;
 
   function renderList(type: string): React.ReactNode {
     const background = Colors[type];
     const link = deployment[type];
+    const textColor =
+      deploymentMode === 'dark' ? 'text-white' : 'text-gray-900';
 
     return (
       <a
-        className='${textColor} mr-2 flex items-center rounded-sm px-2 py-1 text-xs font-medium'
+        className={`mr-2 flex items-center rounded-sm px-2 py-1 text-xs font-medium ${textColor}`}
         href={link}
         style={{ background }}
         target='_blank'
