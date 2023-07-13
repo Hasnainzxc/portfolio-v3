@@ -5,7 +5,6 @@ export type Deployment = {
   web?: string;
   android?: string;
   ios?: string;
-  github?: string;
 };
 
 export interface SubProject {
@@ -62,7 +61,6 @@ export const projects: Project[] = [
     ],
     deployment: {
       web: 'https://github.com/karanpratapsingh/HyperTrade',
-      github: 'https://github.com/karanpratapsingh/HyperTrade',
     },
     subProjects: [],
   },

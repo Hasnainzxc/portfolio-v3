@@ -456,8 +456,4 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'Zaplin',
     color: Colors.zaplin,
   },
-  [Stack.Github]: {
-    value: 'Github',
-    color: Colors.zaplin,
-  },
 };

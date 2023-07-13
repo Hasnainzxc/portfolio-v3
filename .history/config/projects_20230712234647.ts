@@ -62,7 +62,6 @@ export const projects: Project[] = [
     ],
     deployment: {
       web: 'https://github.com/karanpratapsingh/HyperTrade',
-      github: 'https://github.com/karanpratapsingh/HyperTrade',
     },
     subProjects: [],
   },
