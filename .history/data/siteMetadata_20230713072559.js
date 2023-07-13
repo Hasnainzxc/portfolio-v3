@@ -6,7 +6,7 @@ const siteMetadata = {
     'A software engineer who values learning and growing with people, teams, and technologies.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'heyzee.netlify.app',
+  siteUrl: 'https://sajidjaved.co',
   siteRepo: 'https://github.com/hasnainzxc/portfolio-v3',
   siteLogo: '/static/images/logo.png',
   image: '/static/avatar.jpg',
