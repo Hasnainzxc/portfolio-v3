@@ -139,6 +139,7 @@ export default function ListLayout({ title, initialPosts = [], pagination }: Pro
         </ul>
       </div>
       {/* ... (existing code) ... */}
+
     </>
   );
 }
