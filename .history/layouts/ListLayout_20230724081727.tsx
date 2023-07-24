@@ -3,66 +3,35 @@ import Link from '@/components/Link';
 import Pagination from '@/components/Pagination';
 import Tag from '@/components/Tag';
 import formatDate from '@/lib/utils/formatDate';
-import { ComponentProps, useEffect, useState } from 'react';
+import { ComponentProps, useState } from 'react';
 import { BsFilterLeft as FilterIcon } from 'react-icons/bs';
 import { PostFrontMatter } from 'types/PostFrontMatter';
-import axios from 'axios';
 
 interface Props {
+  posts: PostFrontMatter[];
   title: string;
-  initialPosts?: PostFrontMatter[];
-  pagination?: ComponentProps<typeof Pagination>;
-}
-
-interface MediumPost {
-  title: string;
-  pubDate: string;
-  link: string;
-  categories: string[]; // Correctly define categories as an array of strings
-  description: string;
-  initialPosts?: PostFrontMatter[];
+  initialDisplayPosts?: PostFrontMatter[];
   pagination?: ComponentProps<typeof Pagination>;
 }
 
 export default function ListLayout({
+  posts,
   title,
-  initialPosts = [],
+  initialDisplayPosts = [],
   pagination,
 }: Props) {
-  const [posts, setPosts] = useState<MediumPost[]>([]);
-  const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState('');
-
-  useEffect(() => {
-    // Fetch data from your Medium blog URL
-    axios
-      .get(
-        'https://api.rss2json.com/v1/api.json?rss_url=https://hasnainzxc.medium.com/feed/',
-      )
-      .then(response => {
-        if (response.data.status === 'ok') {
-          setPosts(response.data.items);
-          setLoading(false);
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  const filteredPosts = posts.filter(post => {
+  const filteredBlogPosts = posts.filter(frontMatter => {
     const searchContent =
-      post.title + post.description + post.categories.join(' ');
+      frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ');
     return searchContent.toLowerCase().includes(searchValue.toLowerCase());
   });
 
+  // If initialDisplayPosts exist, display it if no searchValue is specified
   const displayPosts =
-    initialPosts.length > 0 && !searchValue ? initialPosts : filteredPosts;
+    initialDisplayPosts.length > 0 && !searchValue
+      ? initialDisplayPosts
+      : filteredBlogPosts;
 
   return (
     <>
@@ -100,28 +69,25 @@ export default function ListLayout({
         </Header>
 
         <ul>
-          {!displayPosts.length && (
+          {!filteredBlogPosts.length && (
             <p className='mt-8 text-center'>No posts found</p>
           )}
-          {displayPosts.map((post, index) => {
-            const { title, pubDate, link, categories, description } = post;
-            const date = formatDate(pubDate);
-            const tags = categories.map((category: string) => category.trim());
-
+          {displayPosts.map(frontMatter => {
+            const { slug, date, title, summary, tags } = frontMatter;
             return (
-              <li key={index} className='py-4'>
+              <li key={slug} className='py-4'>
                 <article className='space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0'>
                   <dl>
                     <dt className='sr-only'>Published on</dt>
                     <dd className='text-base font-medium leading-6 text-gray-500 dark:text-gray-400'>
-                      <time dateTime={date}>{date}</time>
+                      <time dateTime={date}>{formatDate(date)}</time>
                     </dd>
                   </dl>
                   <div className='space-y-3 xl:col-span-3'>
                     <div>
                       <h3 className='text-2xl font-bold leading-8 tracking-tight'>
                         <Link
-                          href={link}
+                          href={`/blog/${slug}`}
                           className='text-gray-900 dark:text-gray-100'
                         >
                           {title}
@@ -134,7 +100,7 @@ export default function ListLayout({
                       </div>
                     </div>
                     <div className='prose max-w-none text-gray-500 dark:text-gray-400'>
-                      {/* <MediumBlog content={description} /> */}
+                      {summary}
                     </div>
                   </div>
                 </article>
@@ -143,7 +109,12 @@ export default function ListLayout({
           })}
         </ul>
       </div>
-      {/* ... (existing code) ... */}
+      {pagination && pagination.totalPages > 1 && !searchValue && (
+        <Pagination
+          currentPage={pagination.currentPage}
+          totalPages={pagination.totalPages}
+        />
+      )}
     </>
   );
 }

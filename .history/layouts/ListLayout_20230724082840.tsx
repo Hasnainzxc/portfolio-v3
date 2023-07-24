@@ -3,35 +3,31 @@ import Link from '@/components/Link';
 import Pagination from '@/components/Pagination';
 import Tag from '@/components/Tag';
 import formatDate from '@/lib/utils/formatDate';
-import { ComponentProps, useEffect, useState } from 'react';
+import { ComponentProps, useState, useEffect } from 'react';
 import { BsFilterLeft as FilterIcon } from 'react-icons/bs';
 import { PostFrontMatter } from 'types/PostFrontMatter';
 import axios from 'axios';
 
 interface Props {
-  title: string;
-  initialPosts?: PostFrontMatter[];
-  pagination?: ComponentProps<typeof Pagination>;
-}
-
-interface MediumPost {
-  title: string;
-  pubDate: string;
-  link: string;
-  categories: string[]; // Correctly define categories as an array of strings
+  categories: any;
   description: string;
-  initialPosts?: PostFrontMatter[];
+  posts: PostFrontMatter[];
+  title: string;
+  summary: string;
+  tags: string;
+  join: string;
+  initialDisplayPosts?: PostFrontMatter[];
   pagination?: ComponentProps<typeof Pagination>;
 }
 
 export default function ListLayout({
   title,
-  initialPosts = [],
+  initialDisplayPosts = [],
   pagination,
 }: Props) {
-  const [posts, setPosts] = useState<MediumPost[]>([]);
-  const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState('');
+  const [posts, setPosts] = useState<Props[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Fetch data from your Medium blog URL
@@ -51,10 +47,7 @@ export default function ListLayout({
       });
   }, []);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
+  // If initialDisplayPosts exist, display it if no searchValue is specified
   const filteredPosts = posts.filter(post => {
     const searchContent =
       post.title + post.description + post.categories.join(' ');
@@ -62,8 +55,9 @@ export default function ListLayout({
   });
 
   const displayPosts =
-    initialPosts.length > 0 && !searchValue ? initialPosts : filteredPosts;
-
+    initialDisplayPosts.length > 0 && !searchValue
+      ? initialDisplayPosts
+      : filteredPosts;
   return (
     <>
       <div className='fade-in divide-y-2 divide-gray-100 dark:divide-gray-800'>
@@ -114,7 +108,7 @@ export default function ListLayout({
                   <dl>
                     <dt className='sr-only'>Published on</dt>
                     <dd className='text-base font-medium leading-6 text-gray-500 dark:text-gray-400'>
-                      <time dateTime={date}>{date}</time>
+                      <time dateTime={date}>{formatDate(date)}</time>
                     </dd>
                   </dl>
                   <div className='space-y-3 xl:col-span-3'>
@@ -133,9 +127,7 @@ export default function ListLayout({
                         ))}
                       </div>
                     </div>
-                    <div className='prose max-w-none text-gray-500 dark:text-gray-400'>
-                      {/* <MediumBlog content={description} /> */}
-                    </div>
+                    <div className='prose max-w-none text-gray-500 dark:text-gray-400'></div>
                   </div>
                 </article>
               </li>
@@ -143,7 +135,12 @@ export default function ListLayout({
           })}
         </ul>
       </div>
-      {/* ... (existing code) ... */}
+      {pagination && pagination.totalPages > 1 && !searchValue && (
+        <Pagination
+          currentPage={pagination.currentPage}
+          totalPages={pagination.totalPages}
+        />
+      )}
     </>
   );
 }

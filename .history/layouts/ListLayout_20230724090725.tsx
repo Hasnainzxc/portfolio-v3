@@ -9,12 +9,7 @@ import { PostFrontMatter } from 'types/PostFrontMatter';
 import axios from 'axios';
 
 interface Props {
-  title: string;
-  initialPosts?: PostFrontMatter[];
-  pagination?: ComponentProps<typeof Pagination>;
-}
-
-interface MediumPost {
+  posts: PostFrontMatter[];
   title: string;
   pubDate: string;
   link: string;
@@ -29,7 +24,7 @@ export default function ListLayout({
   initialPosts = [],
   pagination,
 }: Props) {
-  const [posts, setPosts] = useState<MediumPost[]>([]);
+  const [posts, setPosts] = useState<Props[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState('');
 

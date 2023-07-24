@@ -10,12 +10,7 @@ import axios from 'axios';
 
 interface Props {
   title: string;
-  initialPosts?: PostFrontMatter[];
-  pagination?: ComponentProps<typeof Pagination>;
-}
-
-interface MediumPost {
-  title: string;
+  posts: string;
   pubDate: string;
   link: string;
   categories: string[]; // Correctly define categories as an array of strings
@@ -29,7 +24,7 @@ export default function ListLayout({
   initialPosts = [],
   pagination,
 }: Props) {
-  const [posts, setPosts] = useState<MediumPost[]>([]);
+  const [posts, setPosts] = useState<Props[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState('');
 

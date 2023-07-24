@@ -59,7 +59,8 @@ export default function PostPage({
         description={siteMetadata.description}
       />
       <ListLayout
-        initialPosts={initialDisplayPosts}
+        posts={posts}
+        initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
         title='All Posts'
       />

@@ -11,6 +11,7 @@ import axios from 'axios';
 interface Props {
   title: string;
   initialPosts?: PostFrontMatter[];
+  posts: PostFrontMatter[];
   pagination?: ComponentProps<typeof Pagination>;
 }
 

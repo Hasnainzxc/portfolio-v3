@@ -60,7 +60,7 @@ export default function Tag({
         title={`${tag} - ${siteMetadata.title}`}
         description={`${tag} tags - ${siteMetadata.author}`}
       />
-      <ListLayout initialPosts={posts} title={title} />
+      <ListLayout posts={posts} title={title} />
     </>
   );
 }
