@@ -32,12 +32,12 @@ export default function Blog({
         title={`Blog - ${siteMetadata.author}`}
         description={siteMetadata.description}
       />
-      <ListLayout
+{/*       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
         title='Blog'
-      />
+      /> */}
     </>
   );
 }
