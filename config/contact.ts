@@ -12,12 +12,12 @@ export interface Contact {
 }
 
 export const contact: Contact = {
-  twitter: '@hasnainzxc',
-  site: 'hasnainzxc.co',
-  calendly: 'https://calendly.com/hasnainzxc/hello',
+  twitter: '@sajid.javed',
+  site: 'sajidjaved.com',
+  calendly: 'https://calendly.com/sajidjaved/let-s-chat',
   links: {
-    github: 'https://github.com/hasnainzxc',
-    linkedin: 'https://linkedin.com/in/hasnainzxc',
-    email: 'mailto:hasnainzxc@icloud.com',
+    github: 'https://github.com/SageTheThird',
+    linkedin: 'https://linkedin.com/in/sajidjavedxyz',
+    email: 'mailto:ksajid505@gmail.com',
   },
 };
