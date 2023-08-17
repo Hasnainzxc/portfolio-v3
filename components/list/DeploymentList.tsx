@@ -5,7 +5,7 @@ import { AiOutlineLink } from 'react-icons/ai';
 
 interface DeploymentListProps {
   deployment: Deployment;
-  repository: string;
+  repository: string | null;
 }
 
 function DeploymentList(props: DeploymentListProps): React.ReactElement {

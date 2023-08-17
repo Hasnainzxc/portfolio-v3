@@ -11,6 +11,5 @@ export type PostFrontMatter = {
   readingTime: any;
   canonicalUrl?: string;
   slug: string;
-  categories: string;
   fileName: string;
 };

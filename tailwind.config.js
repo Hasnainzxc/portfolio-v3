@@ -32,14 +32,8 @@ module.exports = {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: {
-          light: colors.cyan[500],
-          dark: colors.cyan[400],
-        },
-        gray: {
-          light: colors.gray[700],
-          dark: colors.gray[100],
-        },
+        primary: colors.cyan,
+        gray: colors.neutral,
         'placeholder-light': '#F0F0F0',
         'placeholder-dark': '#252525',
       },
@@ -48,11 +42,11 @@ module.exports = {
           css: {
             color: theme('colors.gray.700'),
             a: {
-              color: theme('colors.primary.light'),
+              color: theme('colors.primary.500'),
               '&:hover': {
-                color: theme('colors.primary.dark'),
+                color: `${theme('colors.primary.600')} !important`,
               },
-              code: { color: theme('colors.primary.dark') },
+              code: { color: theme('colors.primary.400') },
             },
             h1: {
               fontWeight: '700',
@@ -116,11 +110,11 @@ module.exports = {
           css: {
             color: theme('colors.gray.300'),
             a: {
-              color: theme('colors.primary.light'),
+              color: theme('colors.primary.500'),
               '&:hover': {
-                color: theme('colors.primary.dark'),
+                color: `${theme('colors.primary.400')} !important`,
               },
-              code: { color: theme('colors.primary.dark') },
+              code: { color: theme('colors.primary.400') },
             },
             h1: {
               fontWeight: '700',

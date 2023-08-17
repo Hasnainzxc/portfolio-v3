@@ -12,9 +12,9 @@ export interface Contact {
 }
 
 export const contact: Contact = {
-  twitter: '@sajid.javed',
-  site: 'sajidjaved.com',
-  calendly: 'https://calendly.com/karanpratapsingh',
+  twitter: '@hasnainzxc',
+  site: 'hasnainzxc.co',
+  calendly: 'https://calendly.com/hasnainzxc/hello',
   links: {
     github: 'https://github.com/hasnainzxc',
     linkedin: 'https://linkedin.com/in/hasnainzxc',

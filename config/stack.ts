@@ -80,7 +80,6 @@ export enum Stack {
   jira,
   msoffice,
   zaplin,
-  Github,
 }
 
 // export const WorkStack = [
@@ -183,7 +182,6 @@ export const ProgramsAndToolsStack = [
   Stack.jira,
   Stack.msoffice,
   Stack.zaplin,
-  Stack.Github,
 ];
 
 type StackInfoMap = {
@@ -454,10 +452,6 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
   },
   [Stack.zaplin]: {
     value: 'Zaplin',
-    color: Colors.zaplin,
-  },
-  [Stack.Github]: {
-    value: 'Github',
     color: Colors.zaplin,
   },
 };
