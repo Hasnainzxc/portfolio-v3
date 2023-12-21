@@ -41,7 +41,7 @@ export const sideprojects: SideProject[] = [
     title: 'ThinkAway: A Comprehensive Information Hub',
     slug: 'https://github.com/SageTheThird/ThinkAwayInfoApp',
     banner:
-      'https://pbs.twimg.com/card_img/1736359488708280320/WK_KHE5q?format=jpg&name=medium',
+      'https://opengraph.githubassets.com/1c2e756ba470ec802f1a2bcc2a62cbc3889abc12e3e8d2ea4aeb1f3d52018b4b/SageTheThird/ThinkAwayInfoApp',
     website: 'https://dadsagree.com/',
     description: `ThinkAway is an advanced information application tailored for users seeking a seamless experience. Built using Dagger 2 for dependency injection, Room for local data storage, and Rx Android for reactive programming, the app ensures efficient data handling and a smooth user interface. One of its standout features is its back-end server, powered by Django, which not only provides API services but also manages user data, including subscriptions. This combination of front-end and back-end technologies makes "ThinkAwayInfoApp" a comprehensive solution for information management and delivery.`,
     shortDescription:

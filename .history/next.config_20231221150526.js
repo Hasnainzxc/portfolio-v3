@@ -68,7 +68,7 @@ module.exports = withBundleAnalyzer({
       'imgur.com',
       'i.imgur.com',
       'opengraph.githubassets.com',
-      'pbs.twimg.com',
+      'https://pbs.twimg.com/',
     ],
   },
   async headers() {
