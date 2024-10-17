@@ -185,4 +185,27 @@ export const projects: Project[] = [
     },
     subProjects: [],
   },
+    {
+    title: 'Yooper Shirt',
+    slug: 'yoopershirt',
+    banner: '/static/projects/yooper-shirts/hero.png',
+    website: 'https://dadsagree.com/',
+    description: `"Dads Agree" is a unique platform uniting over 30 dedicated fathers from diverse professions, all committed to offering invaluable parenting insights. From developmental milestones to hands-on product reviews, the website serves as a comprehensive guide for parents navigating the complexities of raising children. Each piece of advice and product recommendation is rooted in real-life experiences, ensuring authentic and practical guidance for the parenting community.`,
+    shortDescription:
+      'A platform where dads share expert parenting advice and product reviews.',
+    repository: 'https://github.com/SageTheThird',
+    stack: [
+      Stack.wordpress,
+      Stack.ahreafs,
+      Stack.jira,
+      Stack.slack,
+      Stack.zaplin,
+    ],
+    dimensions: [400, 680],
+    screenshots: ['FYqywxT.png', 'D6w39Kk.png', 'a/IG9sbrQ.png'],
+    deployment: {
+      web: 'https://dadsagree.com/',
+    },
+    subProjects: [],
+  },
 ];
