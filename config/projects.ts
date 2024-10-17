@@ -188,7 +188,8 @@ export const projects: Project[] = [
   {
     title: 'Yooper Shirt',
     slug: 'yoopershirt',
-    banner: '/static/projects/yooper-shirts/Hero.png',
+    // banner: '/static/projects/yooper-shirts/Hero.png',
+    banner: '/static/projects/shopsy/banner.png',
     website: 'https://dadsagree.com/',
     description: `"Dads Agree" is a unique platform uniting over 30 dedicated fathers from diverse professions, all committed to offering invaluable parenting insights. From developmental milestones to hands-on product reviews, the website serves as a comprehensive guide for parents navigating the complexities of raising children. Each piece of advice and product recommendation is rooted in real-life experiences, ensuring authentic and practical guidance for the parenting community.`,
     shortDescription:
