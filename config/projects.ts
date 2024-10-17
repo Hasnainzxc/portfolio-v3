@@ -185,7 +185,7 @@ export const projects: Project[] = [
     },
     subProjects: [],
   },
-    {
+  {
     title: 'Yooper Shirt',
     slug: 'yoopershirt',
     banner: '/static/projects/yooper-shirts/hero.png',
