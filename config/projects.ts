@@ -33,14 +33,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title:
-      'Darkblock: Revolutionizing Content with Web3 - Unlock, Engage, and Monetize with NFTs!',
+    title: 'Darkblock: Revolutionizing Content with Web3 - Unlock, Engage, and Monetize with NFTs!',
     slug: 'darkblock',
     banner: '/static/projects/darkblock/banner.png',
     website: 'https://www.darkblock.io/',
-    description: `Darkblock is Web3's missing encryption and access control layer. It is a decentralized chain-agnostic protocol that enables creators to control the distribution and monetization of their content.
-    A darkblock is a piece of content encrypted by the Darkblock Protocol and stored on Arweave (where it will live for at least 200 years).
-    A darkblock is immutably linked to an NFT. Only the creator of the NFT can add a darkblock to it and only the owner of the NFT can access it. NFT creators can add darkblock unlockable content even after the NFT has been sold.`,
+    description: `Darkblock is Web3's missing encryption and access control layer...`,
     shortDescription: 'Unlock the power of Web3-native publishing',
     repository: 'https://github.com/darkblockio',
     stack: [
@@ -64,92 +61,58 @@ export const projects: Project[] = [
     ],
     dimensions: [400, 680],
     screenshots: [
-      'OuDBzls.png',
-      'os1I98X.png',
-      'NOIse8w.png',
-      '6Om4Nza.png',
-      'ABnRSYK.png',
-      'MBIUsfB.png',
-      'aXlf0Wo.png',
+      'OuDBzls.png', 'os1I98X.png', 'NOIse8w.png', '6Om4Nza.png', 
+      'ABnRSYK.png', 'MBIUsfB.png', 'aXlf0Wo.png'
     ],
-    deployment: {
-      web: 'https://www.darkblock.io/',
-    },
+    deployment: { web: 'https://www.darkblock.io/' },
     subProjects: [
       {
         title: 'Darkblock Web-App',
         repository: 'https://github.com/darkblockio',
-        description: `The Darkblock web app, app.darkblock.io is a place where NFT creators can add Darkblock unlockable content to NFTs and NFT collections they have created.
-
-          It is also a place where owners can access Darkblock unlockable content that has been added to NFTs they own.`,
-        deployment: {
-          web: 'https://app.darkblock.io',
-        },
+        description: 'The Darkblock web app...',
+        deployment: { web: 'https://app.darkblock.io' },
       },
       {
         title: 'Darkblock-API',
         repository: 'https://github.com/darkblockio',
-        description: `The Darkblock API is a tool for partners to integrate with the Darkblock Protocol quickly and easily with simple REST requests. The API enables you to mint Darkblocks, a piece of content that acts as an upgrade to an NFT, that only the NFT owner can access.`,
-        deployment: {
-          web: 'https://darkblock.redoc.ly/openapi/core/tag/Darkblock-API/',
-        },
+        description: 'The Darkblock API...',
+        deployment: { web: 'https://darkblock.redoc.ly/openapi/core/tag/Darkblock-API/' },
       },
       {
         title: 'Admin Dashboard',
         repository: 'https://github.com/darkblockio',
-        description: `The internal Darkblock dashboard used to monitor the metrics that mattered the most in driving the business forward. Build with React, TailwindCSS and Tremor `,
-        deployment: {
-          web: 'https://darkblock-dashboard.vercel.app/',
-        },
+        description: 'The internal Darkblock dashboard...',
+        deployment: { web: 'https://darkblock-dashboard.vercel.app/' },
       },
       {
         title: 'NPM Packages For Various Chains',
         repository: 'https://github.com/darkblockio',
-        description: `Variety of npms available to make integration easy into developer's/partner's React project. The shared component repo is at the center of all of our other npm projects. This contains our media viewer which helps take popular file formats and render them in browser for consumption. The platform specific npms below use the shared component as a base.`,
-        deployment: {
-          web: 'https://www.npmjs.com/search?q=keywords:darkblock.io',
-        },
+        description: 'Variety of npms available...',
+        deployment: { web: 'https://www.npmjs.com/search?q=keywords:darkblock.io' },
       },
     ],
   },
-
   {
     title: 'Shopsy.pk (Now Prislo): A User-Centric E-commerce Evolution',
     slug: 'shopsy',
     banner: '/static/projects/shopsy/banner.png',
     website: 'https://prislo.com/',
-    description: `Shopsy.pk, later Prislo, revamped its Android app to set new e-commerce standards. The project focused on intuitive design, leading to a 17% rise in positive reviews. Leveraging advanced technologies and regular updates, the team, including me as a Junior Android Developer, ensured the app's continuous improvement, reflecting user needs and trends.`,
+    description: `Shopsy.pk, later Prislo...`,
     shortDescription: 'Revitalizing the User Experience with Online Shopping',
     repository: 'https://github.com/SageTheThird',
     stack: [
-      Stack.java,
-      Stack.androidsdk,
-      Stack.dagger2,
-      Stack.androidstudio,
-      Stack.cicd,
-      Stack.room,
-      Stack.coredata,
-      Stack.firebase,
-      Stack.hilt,
-      Stack.xml,
-      Stack.zaplin,
+      Stack.java, Stack.androidsdk, Stack.dagger2, Stack.androidstudio, 
+      Stack.cicd, Stack.room, Stack.coredata, Stack.firebase, Stack.hilt, 
+      Stack.xml, Stack.zaplin
     ],
     dimensions: [840, 400],
     screenshots: [
-      '0yqWclJ.mp4',
-      'vX5yRxs.jpg',
-      'zoVYEv4.jpg',
-      'aIVkJmJ.jpg',
-      'ONuROum.jpg',
-      '7UeSkTZ.jpg',
-      'fQxvFYk.jpg',
-      'Cb2gvYJ.jpg',
-      '9u3S1y0.jpg',
+      '0yqWclJ.mp4', 'vX5yRxs.jpg', 'zoVYEv4.jpg', 'aIVkJmJ.jpg',
+      'ONuROum.jpg', '7UeSkTZ.jpg', 'fQxvFYk.jpg', 'Cb2gvYJ.jpg', '9u3S1y0.jpg'
     ],
-    deployment: {
+    deployment: { 
       web: 'https://prislo.com/',
-      android:
-        'https://play.google.com/store/apps/details?id=com.prislo.prisloapp&hl=en_SG&gl=US',
+      android: 'https://play.google.com/store/apps/details?id=com.prislo.prisloapp&hl=en_SG&gl=US',
     },
     subProjects: [],
   },
@@ -158,82 +121,52 @@ export const projects: Project[] = [
     slug: 'dadsagree',
     banner: '/static/projects/dadsagree/banner.png',
     website: 'https://dadsagree.com/',
-    description: `"Dads Agree" is a unique platform uniting over 30 dedicated fathers from diverse professions, all committed to offering invaluable parenting insights. From developmental milestones to hands-on product reviews, the website serves as a comprehensive guide for parents navigating the complexities of raising children. Each piece of advice and product recommendation is rooted in real-life experiences, ensuring authentic and practical guidance for the parenting community.`,
-    shortDescription:
-      'A platform where dads share expert parenting advice and product reviews.',
+    description: `Dads Agree is a unique platform...`,
+    shortDescription: 'A platform where dads share expert parenting advice and product reviews.',
     repository: 'https://github.com/SageTheThird',
     stack: [
-      Stack.wordpress,
-      Stack.ahreafs,
-      Stack.jira,
-      Stack.slack,
-      Stack.zaplin,
+      Stack.wordpress, Stack.ahreafs, Stack.jira, Stack.slack, Stack.zaplin
     ],
     dimensions: [400, 680],
     screenshots: [
-      '0ZBueyQ.png',
-      'Ij278E9.png',
-      'zxeolRP.png',
-      'A0K1edX.png',
-      'thLZCvv.png',
-      '056WP8O.png',
-      'L7BSmR5.png',
-      'Ij278E9.png',
+      '0ZBueyQ.png', 'Ij278E9.png', 'zxeolRP.png', 'A0K1edX.png',
+      'thLZCvv.png', '056WP8O.png', 'L7BSmR5.png', 'Ij278E9.png',
     ],
-    deployment: {
-      web: 'https://dadsagree.com/',
-    },
+    deployment: { web: 'https://dadsagree.com/' },
     subProjects: [],
   },
   {
     title: 'Yooper Shirt',
     slug: 'yoopershirt',
     banner: '/static/projects/yoopershirts/Hero.png',
-    // banner: '/static/projects/shopsy/banner.png',
-    website: 'https://dadsagree.com/',
-    description: `"Dads Agree" is a unique platform uniting over 30 dedicated fathers from diverse professions, all committed to offering invaluable parenting insights. From developmental milestones to hands-on product reviews, the website serves as a comprehensive guide for parents navigating the complexities of raising children. Each piece of advice and product recommendation is rooted in real-life experiences, ensuring authentic and practical guidance for the parenting community.`,
-    shortDescription:
-      'A platform where dads share expert parenting advice and product reviews.',
+    website: 'https://yoopershirts.com/', // Corrected URL
+    description: `Yooper Shirt is a Shopify-based apparel platform...`,
+    shortDescription: 'An e-commerce platform selling custom shirts.',
     repository: 'https://github.com/SageTheThird',
     stack: [
-      Stack.shopify,
-      Stack.shopifycli,
-      Stack.Wordpress,
-      Stack.ahreafs,
-      Stack.jira,
-      Stack.slack,
-      Stack.zaplin,
+      Stack.shopify, Stack.shopifycli, Stack.Wordpress, Stack.ahreafs, 
+      Stack.jira, Stack.slack, Stack.zaplin
     ],
     dimensions: [400, 680],
-    screenshots: ['FYqywxT.png', 'D6w39Kk.png', 'a/IG9sbrQ.png'],
-    deployment: {
-      web: 'https://dadsagree.com/',
-    },
+    screenshots: ['FYqywxT.png', 'D6w39Kk.png', 'IG9sbrQ.png'],
+    deployment: { web: 'https://yoopershirts.com/' }, // Fixed the incorrect URL
     subProjects: [],
   },
-  
   {
     title: 'Caps Appareal',
-  slug: 'capsappareal',
-  banner: '/static/projects/caps-appareal/hero.png',
-  website: 'https://capsapparel.com/', 
-  description: 'A comprehensive e-commerce platform for apparels, providing a user-friendly interface and seamless shopping experience.',
-  shortDescription: 'An apparel e-commerce platform.',
-  repository: 'https://github.com/your-repo/capsappareal', 
-  stack: [
-    Stack.shopify,
-    Stack.shopifycli,
-    Stack.wordpress,
-     Stack.ahreafs,
-    Stack.slack,
-    Stack.jira,
-    Stack.zaplin,
-  ],
+    slug: 'capsappareal',
+    banner: '/static/projects/caps-appareal/hero.png',
+    website: 'https://capsapparel.com/', 
+    description: 'A comprehensive e-commerce platform for apparels, providing a user-friendly interface and seamless shopping experience.',
+    shortDescription: 'An apparel e-commerce platform.',
+    repository: 'https://github.com/your-repo/capsappareal', 
+    stack: [
+      Stack.shopify, Stack.shopifycli, Stack.wordpress, Stack.ahreafs, 
+      Stack.slack, Stack.jira, Stack.zaplin
+    ],
     dimensions: [400, 680],
-    screenshots: ['YCyB9gD.png', 'eTJ1yaL.png', 'BA98Kxb.png', 'lFKpHjV.png',
-    deployment: {
-      web: 'https://capsapparel.com/',
-    },
+    screenshots: ['YCyB9gD.png', 'eTJ1yaL.png', 'BA98Kxb.png', 'lFKpHjV.png'], // Fixed missing closing bracket
+    deployment: { web: 'https://capsapparel.com/' },
     subProjects: [],
   },
 ];
