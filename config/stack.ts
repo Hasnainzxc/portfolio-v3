@@ -14,6 +14,13 @@ export enum Stack {
   html,
   yaml,
   xml,
+ 
+ // CMS Platforms
+  shopify,
+  shopifycli,
+  wordpress,
+  woocommerce, // Added WooCommerce
+  
 
   // Web Development
   nodejs,
@@ -22,6 +29,7 @@ export enum Stack {
   mongodb,
   gatsby,
   nextjs,
+
 
   // Mobile Development
   androidsdk,
@@ -243,6 +251,18 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
   [Stack.nodejs]: {
     value: 'Node.js',
     color: Colors.nodejs,
+  },
+  [Stack.shopify]: {
+    value: 'shopify',
+    color: Colors.nodejs
+  },
+  [Stack.shopifycli]: {
+    value: 'shopifycli',
+    color: Colors.nodejs
+  },
+  [Stack.wordpress]: {
+    value: 'wordpress',
+    color: Colors.react,
   },
   [Stack.react]: {
     value: 'React',
