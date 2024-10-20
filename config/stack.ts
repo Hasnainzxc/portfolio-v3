@@ -18,7 +18,7 @@ export enum Stack {
  // CMS Platforms
   shopify,
   shopifycli,
-  wordpress,
+  Wordpress,
   woocommerce, // Added WooCommerce
   
 
@@ -260,8 +260,8 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'shopifycli',
     color: Colors.nodejs
   },
-  [Stack.wordpress]: {
-    value: 'wordpress',
+  [Stack.Wordpress]: {
+    value: 'Wordpress',
     color: Colors.react,
   },
   [Stack.react]: {
