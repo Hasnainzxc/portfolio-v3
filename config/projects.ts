@@ -196,7 +196,9 @@ export const projects: Project[] = [
       'A platform where dads share expert parenting advice and product reviews.',
     repository: 'https://github.com/SageTheThird',
     stack: [
-      Stack.wordpress,
+      Stack.shopify,
+      Stack.shopifycli,
+      Stack.Wordpress,
       Stack.ahreafs,
       Stack.jira,
       Stack.slack,
@@ -220,7 +222,9 @@ export const projects: Project[] = [
       'A platform where dads share expert parenting advice and product reviews.',
     repository: 'https://github.com/SageTheThird',
     stack: [
-      Stack.wordpress,
+      Stack.shopify,
+      Stack.shopifycli,
+      Stack.Wordpress,
       Stack.ahreafs,
       Stack.jira,
       Stack.slack,
