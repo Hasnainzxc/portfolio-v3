@@ -235,6 +235,10 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'C++',
     color: Colors.cpp,
   },
+  [Stack.woocommerce]: {
+    value: 'woocommerce',
+    color: Colors.cpp,
+  },
   [Stack.html]: {
     value: 'HTML',
     color: Colors.html,
